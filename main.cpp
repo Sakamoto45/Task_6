@@ -19,11 +19,6 @@ double calc(char op, double a, double b, string &opn) {
 
 int main() {
 
-    
-	
-	
-
-
     stack<double> x;
     stack<char> y;
 
@@ -42,6 +37,8 @@ int main() {
     
     stringstream fin(stream);
 
+    cout << stream << endl;
+	
     while (!fin.eof()) {
         fin >> tmp;
         string num = "";
