@@ -42,7 +42,7 @@ int main() {
     while (!fin.eof()) {
         fin >> tmp;
         string num = "";
-        while (((tmp >= '0' && tmp <= '9') || ((tmp_last == '(' || tmp_last == 's') && tmp == '-') || (tmp == 'e' || tmp == ',' || (tmp_last == 'e' && (tmp == '-' || tmp == '+')))) && !fin.eof()) {
+        while (((tmp >= '0' && tmp <= '9') || ((tmp_last == '(' || tmp_last == 's') && tmp == '-') || (tmp == 'e' || tmp == ',' || tmp == '.' || (tmp_last == 'e' && (tmp == '-' || tmp == '+')))) && !fin.eof()) {
             num += (tmp == ',' ? '.' : tmp);
             tmp_last = tmp;
             fin >> tmp;
