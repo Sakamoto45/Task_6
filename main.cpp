@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <fstream>
 #define INF 1e9
 
 using namespace std;
@@ -17,6 +18,12 @@ double calc(char op, double a, double b, string &opn) {
 }
 
 int main() {
+
+    
+	
+	
+
+
     stack<double> x;
     stack<char> y;
 
@@ -25,8 +32,14 @@ int main() {
     char tmp_last = 's';//start
     string opn = "";
 
+
     string stream;
-    getline(cin, stream);
+    ifstream f("input.txt");
+    getline(f, stream);
+    f.close();
+    
+    //getline(cin, stream);
+    
     stringstream fin(stream);
 
     while (!fin.eof()) {
@@ -73,6 +86,7 @@ int main() {
     opn += tmp;
     cout << x.pop() << endl;
     cout << opn << endl;
+    
     return 0;
 }
 
