@@ -35,8 +35,10 @@ public:
 
     T pop() {
         T x = list->n;
-        list = list->next;
-        return x;
+		stack_elem<T>* B = list;
+		list = list->next;
+		delete(B);
+		return x;
     };
 
     T top() {
